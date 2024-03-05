@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": -92.5,
+        "lat": 16.5
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 299.13,
+        "feels_like": 299.13,
+        "temp_min": 299.13,
+        "temp_max": 299.13,
+        "pressure": 1018,
+        "humidity": 27,
+        "sea_level": 1018,
+        "grnd_level": 873
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.37,
+        "deg": 234,
+        "gust": 3.31
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1708796606,
+    "sys": {
+        "country": "MX",
+        "sunrise": 1708777883,
+        "sunset": 1708820131
+    },
+    "timezone": -21600,
+    "id": 3531011,
+    "name": "Chiapas",
+    "cod": 200
+}

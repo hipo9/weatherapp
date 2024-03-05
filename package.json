@@ -1,0 +1,29 @@
+{
+  "name": "weatherapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@vitejs/plugin-react": "4.2.1",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-loader-spinner": "^6.1.6",
+    "react-router-dom": "^6.22.1",
+    "react-select": "^5.8.0",
+    "sass": "^1.71.1",
+    "sort-by": "^1.2.0"
+  }
+}

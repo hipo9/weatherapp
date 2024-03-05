@@ -1,0 +1,79 @@
+@use '../scss/base/variables'as v;
+@use '../scss/base/mixins'as m;
+
+.description {
+    width: 100%;
+    transition: width 0.3s ease;
+
+    
+    height: 100%;
+
+    &__col {
+        text-align: center;
+    }
+
+    &__colBottom {
+        text-align: initial;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__city {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    &__degree {
+        font-size: 5rem;
+    }
+
+    &__feelsLike,
+    &__status,
+    &__minMax {
+        color: v.$white;
+    }
+
+    &__containerMain {
+        width: 100%;
+        display: flex;
+        gap: 5rem;
+        justify-content: center;
+
+    }
+}
+
+/*********
+ **ITEMS *
+ *********/
+.items {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @include m.tablet {
+        width: 60%;
+    }
+}
+
+/**********
+ * *ITEM  *
+ **********/
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+
+    &__span {
+        font-size: inherit;
+
+
+    }
+}
