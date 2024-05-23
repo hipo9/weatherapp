@@ -2,11 +2,17 @@
 @use '../scss/base/mixins'as m;
 
 .view {
-    min-width: 20rem;
+    //min-width: 20rem;
+    //max-height: 100%;
+    height: auto;
     min-height: 60rem;
-    height: 100%;
+    //margin: 2rem;
+    
     background-color: v.$white;
     margin: 0 auto;
+
+
+
     border-radius: 1rem;
     box-shadow: 0px 0px 12px v.$brightTxt;
     background-color: transparent;
@@ -14,20 +20,52 @@
     z-index: 2;
     transition: width 0.3s ease;
     color: v.$white;
-    display: flex;
-    flex-direction: column;
 
+    //background-color: red;
 
 
     @include m.tablet {
         display: flex;
         flex-direction: row;
         padding: 5rem;
+        min-height: 40rem;
+        height: 50rem;
+
     }
 
     @include m.desktop {
         max-width: 80rem;
     }
+
+    &__containerBtn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 1rem 0 0 1rem;
+
+        padding-top: 1rem;
+
+        @include m.tablet {
+            margin: 0 0 0 1rem;
+            padding-top: 0rem;
+        }
+
+        &:hover {
+            background-color: darken($color: v.$primary, $amount: 4);
+            border-radius: 1rem;
+        }
+    }
+
+    &__back {
+        width: 5rem;
+        height: 4rem;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+
+    }
+
+
 
 
     &__header {
@@ -41,13 +79,11 @@
     &__title {
         color: v.$dark;
         font-size: 2.6rem;
-        text-align: center;
-        margin: 2rem 0 0 0;
-        border-bottom: 1px solid rgb(0 0 0 /0.2);
+
         width: auto;
         width: 100%;
-        padding: 1rem;
-        margin: 0;
+
+
         color: v.$white;
     }
 

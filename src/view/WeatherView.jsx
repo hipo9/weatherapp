@@ -1,20 +1,18 @@
-import React, { useContext, useEffect } from 'react';
-import stl from './weatherView.module.scss';
-import { Details } from '../components/Details';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Form, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useWeather } from '../hooks/useWeather';
-import { ColorRing } from 'react-loader-spinner';
-import { Loading } from '../components';
+import { Loading, Details } from '../components';
+import stl from './weatherView.module.scss';
 
 export const WeatherView = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const objInput = location.state;
-	const { getWeather, weather, isLoading } = useWeather();
-
+	const { getWeather, weather, isLoading, isDataLoaded, setIsDataLoaded } =
+		useWeather();
+	console.log(isDataLoaded);
 	useEffect(() => {
 		getWeather(objInput.city, objInput.country);
-		console.log(isLoading);
 	}, []);
 
 	const handleClick = () => {
@@ -24,14 +22,19 @@ export const WeatherView = () => {
 	return (
 		<section className={stl.view}>
 			<header className={stl.view__header}>
-				<button onClick={handleClick}>click</button>
-				<h1 className={stl.view__title}>ClimaApp</h1>
+				<div className={stl.view__containerBtn}>
+					<button onClick={handleClick} className={stl.view__back}>
+						<img src='./assets/arrow.png' alt='icon-arrow' />
+					</button>
+					<h1 className={stl.view__title}>ClimaApp</h1>
+				</div>
 				<img
 					className={stl.view__img}
-					src='src/icons/cloud2.png'
+					src='./assets/cloud2.png'
 					alt='imagen del clima'
 				/>
 			</header>
+
 			{isLoading ? <Loading /> : <Details objDataWeather={weather} />}
 		</section>
 	);

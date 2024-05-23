@@ -12,9 +12,9 @@ export const Form = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const formData = new FormData(e.target);
-		const city = formData.get('city');
-        const country = formData.get( 'country' );
-        
+		const city = formData.get('city').trim();
+		const country = formData.get('country').trim();
+
 		if (!inputsValidation({ country, city })) return;
 		navigate(`/weather`, { state: { city, country } });
 	};
@@ -39,7 +39,8 @@ export const Form = () => {
 					Obtener Clima
 				</button>
 			</form>
-			{errorMsg.length && (
+			
+			{!!errorMsg.length && (
 				<div className={stl.form__msg}>
 					<p>{errorMsg}</p>
 				</div>

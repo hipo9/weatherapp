@@ -19,8 +19,8 @@ export const useWeather = () => {
                 const newWeatherData = mapDataToWheater( data );
                 console.log( newWeatherData );
                 setWeather( newWeatherData );
-                setIsLoading( false )
-                setIsDataLoaded( true )
+                setIsLoading( false );
+                setIsDataLoaded( true );
                 return newWeatherData;
 
             } )
@@ -29,5 +29,5 @@ export const useWeather = () => {
     }
 
 
-    return { getWeather, weather, isDataLoaded, isLoading }
+    return { getWeather, weather, isDataLoaded, isLoading, setIsDataLoaded }
 }

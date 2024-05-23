@@ -1,8 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import stl from './details.module.scss';
-import { WeatherContext } from '../context/WeatherContext';
-import { useLocation } from 'react-router-dom';
-import { useWeather } from '../hooks/useWeather';
+
 
 export const Details = ({ objDataWeather }) => {
     if (!objDataWeather) return;
